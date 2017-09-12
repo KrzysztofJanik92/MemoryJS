@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Memory Game</title>
+    
+   <!-- custom CSS -->
+    <link rel="stylesheet" type="text/css" id="sheet"  href="css/memory.css">
+    
+    <!-- font awesome, google fonts -->        
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
+</head>
+<body>
+   
+    <!-- Initial menu -->
+    <div class="slide-start show" id="stageStart">
+        <h1><i class="fa fa-star" aria-hidden="true"></i>EXTREME MEMORY GAME<i class="fa fa-star" aria-hidden="true"></i></h1>
+        <button class="start-game button" id="startGame">START</button>
+        <button class="show-highscore button" id="showHighscore">SCORES</button>
+    </div>
+    
+    <!-- Difficulty levels panel -->
+    <div class="slide-levels" id="stageLevels">
+        <div class="player-levels">
+            <button class="button" id="easy">EASY</button>
+            <button class="button" id="hard">HARD</button>
+            <button class="button" id="extreme">EXTREME</button>
+
+            <div class="info-levels">
+                <p>Easy - 10 tiles but doubled number of moves</p>
+                <p>Hard - 20 tiles</p>
+                <p>Extreme - 20 tiles and max 16 moves</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Player name panel -->
+    <div class="slide-player-name" id="stagePlayerName">
+        <div class="player-name-box">
+            <label for="playerName">PLAYER NAME:</label>
+            <input type="text" id="playerName" class="player-name" maxlength="10" />
+            <div class="player-name-error">You must enter the player name</div>
+            <button class="button" id="checkName">START</button>
+        </div>
+    </div>
+
+    <!-- Game panel -->
+    <div class="slide-game" id="stageGame">
+        <div class="info">
+            <span class="info-btn info-btn-left" id="restart">RESTART</span>
+            <span class="info-btn info-btn-center">NUMBER OF MOVES:</span>
+            <span class="game-moves info-btn info-btn-center" id="gameMoves"></span>
+            <span class="info-btn info-btn-right">LEVEL:<span class="info-btn info-btn-right" id="info"> HARD</span></span>
+        </div>
+        <!-- mobile info -->
+        <div class="mobile_info">
+            <span class="info-btn" id="mobileRestart">RESTART</span>
+            <span class="info-btn" id="mobileGameMoves"></span>
+            <span class="info-btn info-btn-right" id="mobileInfo">HARD</span> 
+        </div> 
+        <!-- Game board -->
+        <div class="game-board" id="gameBoard"></div>
+    </div>
+
+    <!-- Scores panel -->
+    <div class="slide-highscore" id="stageHighscore">
+        <h2><i class="fa fa-star" aria-hidden="true"></i>BEST PLAYERS<i class="fa fa-star" aria-hidden="true"></i></h2>
+        <button class="close-highscore nav-button">&lt; BACK</button>
+        <div class="highscore-board" id="highscoreBoard"></div>
+    </div>
+    
+    
+    <script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script> 
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,473 @@
+/* media */
+@media only screen and ( max-width: 1200px ) {
+   .slide-game .info {
+        width: 95%;
+    }
+}
+
+@media only screen and ( max-width: 767px ) {
+    .slide-start h1 {
+        font-size: 38px;
+    }
+    .slide-game .info .info-btn {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+}
+
+@media only screen and ( max-width: 641px ) {
+    .slide-start h1 {
+        font-size: 32px;
+    }
+    .slide-game .info .info-btn {
+        font-size: 14px;
+    }
+}
+
+@media only screen and ( max-width: 575px) {  
+    .slide-start h1 {
+        font-size: 24px;
+        margin: 100px 5px;
+    }
+    .slide-game .game-board {
+        padding: 0;
+    }
+    .game-board .cell {
+        width:40%;
+        height:9%;
+    }
+    .slide-game .info {
+        display: none;
+    }
+    .slide-game .mobile_info {
+        font-family: "Chewy", serif;
+        color: red;
+    }
+    .slide-game .mobile_info {
+        display: block;
+    }
+}
+
+@media only screen and ( max-width: 380px ) {
+    .slide-start h1 {
+        font-size: 16px;
+        margin: 70px 1px;
+    }
+    .slide-levels .player-levels {
+        margin: 30px;
+    }
+    .slide-levels .player-levels .button {
+        font-size: 24px;
+        width: 95%;
+    }
+    .slide-start button {
+        font-size: 24px;
+    }
+    .slide-levels .player-levels .nav-button {
+        width: 95%;
+    }
+    .slide-game .mobile_info {
+        font-family: "Chewy", serif;
+        color: red;
+    }
+    .slide-game .mobile_info .info-btn {
+        padding: 2px;
+        font-size: 16px;
+    }
+}
+
+/* general */
+* { margin: 0; padding: 0; }
+
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Black Ops One';
+    color: #000;
+}
+
+h1 {
+    text-align: center;
+    margin: 150px auto;
+    color: #000;
+    font-size: 42px;
+    cursor: default;
+}
+
+h2 {
+    margin: 45px auto;
+    text-align:center;
+    cursor: default;
+}
+
+.fa-star {
+    padding: 0 10px;
+}
+
+/* game stage (panels) */
+[class^=slide-] {
+    z-index:1;
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    min-height: 100%;
+    background: #fff;    
+    transition: 0.2s; 
+}
+
+[class^=slide-].show {
+    z-index:2;
+    visibility: visible;
+    opacity: 1;
+}
+
+.slide-start {
+    top: 0;
+    background: url(../images/img_start123.jpg) center center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.slide-levels {
+    top: 0;
+    background: url(../images/img_start123.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.slide-player-name {
+    top: 0;
+    background: url(../images/img_start123.jpg) center center no-repeat;
+    background-size: cover;
+}  
+
+.slide-game {
+    top: 0;
+    background: url(../images/img_easy.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.player-levels {
+    margin: 100px auto
+}
+
+.info-levels {
+    text-align: center;
+    font-size: 28px;
+}
+
+.mobile_info {
+    display: none;
+}
+
+.slide-highscore {
+    top: 0;
+    background: url(../images/img_start123.jpg) center center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* buttons */
+.button {
+    cursor: pointer;
+    background: none;
+    max-width: 500px;
+    width: 50%;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    font-size: 36px;
+    display: block;
+    margin: 15px auto;
+    border: 3px solid #000;
+    font-family: 'Black Ops One', cursive;
+}
+
+.button:hover {
+    background: rgba(188, 1, 1, 0.6);
+    transition: 0.4s;
+}
+
+.nav-button {
+    cursor: pointer;
+    background: none;
+    max-width: 500px;
+    width: 50%;
+    text-align: center;
+    color: #000;
+    font-size: 36px;
+    display: block;
+    margin: 15px auto;
+    font-family: 'Black Ops One', cursive;
+    border: none;
+}
+
+.game-over {
+    background: url(../images/wood2.jpg);
+    max-width: 500px;
+    width: 50%%;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    font-size: 36px;
+    display: block;
+    margin: 15px auto;
+    border: 3px solid #000;
+}
+
+/* game-info (info-btn) */
+.info {
+    border-radius: 10px;
+    height: 75px;
+    text-align: center;
+    color: #000;
+    width: 65%;
+    margin: 15px auto;
+    background: rgba(233, 250, 40, 0.7);
+    border: 3px solid red;
+    font-family: 'Chewy', cursive;
+    color: red;
+    font-weight: bolder;
+    background: rgba(233, 250, 40, 0.7);
+    border: 3px solid red;
+    font-family: 'Chewy', cursive;
+    color: red;
+    font-weight: bolder;
+}
+
+.info-btn {
+    float: left;
+    line-height: 75px;
+    font-size: 20px;
+    padding: 0 20px;
+    cursor: default;
+    margin: 0 10px;
+    
+}
+
+.info-btn-left {
+    float: left;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.info-btn-right {
+    float: right;
+}
+
+.info-btn-center {
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.info-btn-left:hover {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.game-moves {
+    font-size: 22px;
+}
+
+/* player name box */
+.player-name-box {
+    max-width: 500px;
+    width: 80%;
+    margin: 140px auto;
+}
+
+.player-name-box label {
+    font-size: 32px;
+    text-align: center;
+    margin: 0 auto;
+    color: #000;
+    display: block;        
+    line-height: 24px;
+}
+
+.player-name-box .player-name {
+    width: 100%;
+    height: 90px;    
+    padding: 0 15px;
+    font-family: 'Black Ops One', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+.player-name-box .player-name:focus {    
+    box-shadow: inset 0 0 10px red;
+    outline: none;
+}
+
+.player-name-box .player-name-error {
+    background: url(../images/error.png) no-repeat;
+    padding-left: 40px;
+    line-height: 32px;
+    font-size: 26px;
+    color: #000;
+    margin:5px auto;
+    display: none;
+}
+
+.player-name-box.error .player-name-error {
+    display: block; 
+}
+
+/* game board */
+.game-board {
+    position: relative;    
+    overflow: hidden;
+    max-width: 600px;
+    height: 400px;
+    width: 80%;
+    margin: 0 auto;   
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 40px 40px;
+}
+
+/* cell on a board */
+.game-board .cell {        
+    width: 19%; 
+    margin: 0.5%;
+    height: 23%;
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+}
+
+/* tile */
+.game-board .tile {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+.game-board .tile span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0; 
+    left: 0;
+}
+.game-board .tile .avers {        
+    box-shadow: 0 0 3px rgba(0,0,0,0.2), inset 0 40px 10px rgba(0,0,0,0.1), inset 0 0 2px 1px rgba(0,0,0,0.4);    
+    z-index:3;    
+    transition: 0.2s;    
+    transform:scaleX(0);
+}
+.game-board .tile .revers {
+    background: Rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    display: block;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    transition: 0.2s 0.2s; 
+    transform: scaleX(1);
+}
+
+.tile-background:before {
+    background: rgba(233, 250, 40, 0.7);
+    border: 1px solid red; 
+    color: red;
+    font-family: 'chewy', cursive;
+    content: '?';
+    border-radius: 10px;
+    width: 100%;
+    text-shadow: 0 0 2px #C1C5D7;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 3em;
+    line-height: 2em;
+    transition: 0.2s;
+}
+
+.tile-background-hard:before {
+    background: url(../images/img_hard.jpg);
+    border: 1px solid #000;
+    color:#C1C5D7;
+}
+
+.tile-background-extreme:before {
+    background: url(../images/wood2.jpg);
+    border: 1px solid #000;
+    color: #000;
+    font: 'Times New Roman', serif;
+}
+
+.game-board .tile:hover .revers:before {
+    opacity:0.4;
+    color: #000;
+}
+/* show */
+.defeatGame {
+    z-index: 2;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -100px; 
+    margin-top: -100px; 
+}
+
+.defeatGame span {
+    color: red;
+    font-size: 36px;
+    margin: 0;
+}
+
+.game-board .tile.show .avers { 
+    transition: 0.2s 0.2s;       
+    transform:scaleX(1);
+} 
+.game-board .tile.show .revers {
+    transition: 0.2s;   
+    transform:scaleX(0);
+}  
+
+/* indywidualny wygląd każdej grupy kafelków */
+.game-board .card-type-0 .avers {background:url(../images/image1.png) center center no-repeat;}
+.game-board .card-type-1 .avers {background:url(../images/image2.png) center center no-repeat;}
+.game-board .card-type-2 .avers {background:url(../images/image3.png) center center no-repeat;}
+.game-board .card-type-3 .avers {background:url(../images/image4.png) center center no-repeat;}
+.game-board .card-type-4 .avers {background:url(../images/image5.png) center center no-repeat;}
+.game-board .card-type-5 .avers {background:url(../images/image6.png) center center no-repeat;}
+.game-board .card-type-6 .avers {background:url(../images/image7.png) center center no-repeat;}
+.game-board .card-type-7 .avers {background:url(../images/image8.png) center center no-repeat;}
+.game-board .card-type-8 .avers {background:url(../images/image9.png) center center no-repeat;}
+.game-board .card-type-9 .avers {background:url(../images/image10.png) center center no-repeat;}
+
+.loading {
+    position: fixed;
+    top:10px;
+    left:10px;
+    background:#fff url(loading.gif) center center no-repeat;
+    display: none;
+    width:40px;
+    height: 40px;
+    border-radius:10px;
+    z-index:10;
+    opacity:0.8;
+}
+
+/* high score */
+.highscore-board {
+    width:90%;
+    max-width:500px;
+    border:10px;
+    margin:10px auto;
+    font-size:1.5em;
+    box-shadow:0 3px 6px rgba(0,0,0,0.2);
+}
