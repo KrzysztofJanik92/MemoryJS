@@ -200,27 +200,15 @@
             e.preventDefault();
             showLevels();                
         });
-        $('#easy').on('click', function(){
-            showPlayerName();
-            $("#sheet").attr('href', "css/memory-easy.css");
-            $('#info').text(' EASY');
-            $('#mobileInfo').text(' EASY');
-            gameLevel = 0;
-            tiles_count = 10;
-
-        });
-        $('#hard').on('click', function(){
-            showPlayerName();
-            gameLevel = 1;
-            tiles_count = 20;
-        });
-        $('#extreme').on('click', function(){
-            showPlayerName();
-            $("#sheet").attr('href', "css/memory-extreme.css");
-            $('#info').text(' EXTREME');
-            $('#mobileInfo').text(' EXTREME');
-            gameLevel = 2;
-            tiles_count = 20;
+        $('.player-levels').on('click', function(){
+          if(config[event.target.id]) {
+            showPlayerName(config[event.target.id]);
+            tiles_count = config[event.target.id].tiles;
+            $("#sheet").attr('href', config[event.target.id].styles);
+            $('#info').text(config[event.target.id].textLevel);
+            $('#mobileInfo').text(config[event.target.id].textLevel);
+            gameLevel = config[event.target.id].gameLev;
+          }
         });
         $("#restart").on('click', function() {
             $('#gameMoves').text('');
