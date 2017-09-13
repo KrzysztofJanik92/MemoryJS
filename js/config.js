@@ -9,7 +9,6 @@ var config = {
         gameLev: 1,
         tiles: 20,
         textLevel: ' HARD',
-        styles: 'css/memory-hard.css'
     },
     extreme: {
         gameLev: 2,
