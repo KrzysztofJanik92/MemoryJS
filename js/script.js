@@ -74,7 +74,7 @@
                 movesCount+=2;
             }
         
-            if (gameLevel === 2 && movesCount >= 20){
+            if (gameLevel === 2 && movesCount >= 16){
                 $("#gameBoard").html("<span class='game-over'>GAME OVER</span>");
             }  
             
